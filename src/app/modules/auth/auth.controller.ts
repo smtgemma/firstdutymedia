@@ -10,7 +10,7 @@ const createAccount = catchAsync(async (req, res) => {
 
   sendResponse(res, {
     statusCode: httpStatus.CREATED,
-    message: 'OTP sent to your email successfully',
+    message: 'Registered Successfully!',
     data: result,
   });
 });
@@ -89,7 +89,7 @@ const userDeleteFromDB = catchAsync(async (req: Request, res: Response) => {
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
-    message: 'User logged in successfully',
+    message: 'User delete successfully',
     data: result,
   });
 });
