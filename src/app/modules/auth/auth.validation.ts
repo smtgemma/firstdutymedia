@@ -22,7 +22,7 @@ const phoneAuth = z.object({
 const phoneVerifyRegister = z.object({
   body: z.object({
     userId: z.string({ required_error: 'userId is required!' }),
-    otpCode: z.string({ required_error: 'otpCode is required!' }).length(6, 'otpCode must be 6 digit'),
+    otpCode: z.string({ required_error: 'otpCode is required!' }).length(4, 'otpCode must be 4 digit'),
     firstName: z.string({ required_error: 'First name is required!' }),
     lastName: z.string({ required_error: 'Last name is required!' }),
   }),
@@ -31,7 +31,7 @@ const phoneVerifyRegister = z.object({
 const phoneVerifyLogin = z.object({
   body: z.object({
     userId: z.string({ required_error: 'userId is required!' }),
-    otpCode: z.string({ required_error: 'otpCode is required!' }).length(6, 'otpCode must be 6 digit'),
+    otpCode: z.string({ required_error: 'otpCode is required!' }).length(4, 'otpCode must be 4 digit'),
   }),
 });
 
@@ -69,7 +69,7 @@ const verifyOtp = z.object({
       .string({
         required_error: 'otpCode is required!',
       })
-      .length(6, 'otpCode must be 6 digit'),
+      .length(4, 'otpCode must be 4 digit'),
   }),
 });
 
